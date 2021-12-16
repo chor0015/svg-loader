@@ -1,0 +1,97 @@
+body {
+  width: 500px;
+  height: 1000px;
+  margin: 0;
+}
+
+#clock-hand {
+  animation: rotate 12s steps(12) infinite;
+  transform-origin: 562px 1220px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+#coin {
+  animation: jump 2s cubic-bezier(.59,.01,.14,.97)infinite;
+  transform-origin: 563px 1218px;
+}
+
+#coin-2 {
+  animation: jump2 2s 1s cubic-bezier(.59,.01,.14,.97)infinite;
+  transform-origin: 563px 1218px;
+}
+
+@keyframes jump {
+  0%   {
+    transform: translate(0,0);
+    opacity: 100%;
+  }
+
+  30% {
+    transform: translate(-300px, -350px);
+    opacity: 100%;
+  }
+  
+
+  100% {
+    transform: translate(-500px, 500px);
+    opacity: 0%;
+  }
+
+}
+
+@keyframes jump2 {
+  0%   {
+    transform: translate(0,0);
+    opacity: 100%;
+  }
+
+  30% {
+    transform: translate(300px, -350px);
+    opacity: 100%;
+  }
+  
+
+  100% {
+    transform: translate(500px, 500px);
+    opacity: 0%;
+  }
+
+}
+
+#dot-1 {
+  animation: opacity 3s infinite alternate;
+  opacity: 0;
+}
+
+#dot-2 {
+  animation: opacity 3s .5s linear infinite alternate;
+  opacity: 0;
+}
+
+#dot-3 {
+  animation: opacity 3s 1s linear infinite alternate;
+  opacity: 0;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0%;
+  }
+
+  50% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
